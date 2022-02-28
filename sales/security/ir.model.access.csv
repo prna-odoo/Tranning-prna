@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+sales.access_tasks_model,access_tasks_model,sales.model_tasks_model,base.group_user,1,1,1,1
