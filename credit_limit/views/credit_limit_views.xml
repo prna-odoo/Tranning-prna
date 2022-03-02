@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- contact form inherit -->
+	<record id="view_partner_form" model="ir.ui.view">
+        <field name="name">view.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="product.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="credit_limit" string="Credit limit"/>
+                <field name="credit" string="Total Receivable"/>
+
+
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
+
+
+
+
+
+<!-- 
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+     contact form inherit 
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">view.partner.form.inhert</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']"  position="after">
+                <field name="credit_limit" string="Credit limit"/>
+                <field name="credit" string="Total Receivable"/>
+            </xpath>
+        </field>
+    </record>
+</odoo> -->

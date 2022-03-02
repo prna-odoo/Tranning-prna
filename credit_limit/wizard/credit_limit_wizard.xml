@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="credit_wizard" model="ir.ui.view">
+            <field name="name">credit_wizard</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <t out="Total Receivable value should less then credit value"></t>
+                <button string="Cancel" class="btn-secondary" special="cancel"/>
+            </field>
+        </record>
+    </data>
+</odoo>    
