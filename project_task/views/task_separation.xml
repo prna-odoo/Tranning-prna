@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
 	
-        <!-- task sepration kanban view-->
+        <!-- task separation kanban view-->
         <record id ="view_task_kanban" model="ir.ui.view">
             <field name="name">project.view.task.kanban.inharit</field>
             <field name="model">project.task</field>

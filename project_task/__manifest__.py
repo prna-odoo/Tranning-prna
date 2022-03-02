@@ -11,7 +11,7 @@
 
     
     'data': [
-        "views/task_sepration.xml",
+        "views/task_separation.xml",
     ],
 
     'installable': True,
