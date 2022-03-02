@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+	
+        <!-- task sepration kanban view-->
+        <record id ="view_task_kanban" model="ir.ui.view">
+            <field name="name">project.view.task.kanban.inharit</field>
+            <field name="model">project.task</field>
+            <field name= "inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//strong[hasclass('o_kanban_record_title')]" position="before">
+                    <t t-if="record.parent_id.value">
+                        <div>
+                            <strong>
+                                <field name="parent_id"/>
+                            </strong>
+                        </div>
+                        <i class="fa fa-plus" title="Sub-Task" style="font-size:16px"/>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+    
+</odoo>
