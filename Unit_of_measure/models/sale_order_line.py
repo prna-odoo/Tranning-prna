@@ -1,9 +1,4 @@
-import string
-from odoo import _,models,fields,api
-from datetime import datetime, timedelta, date
-from odoo.exceptions import UserError, ValidationError
-
-
+from odoo import api,fields,models,api
 
 
 class SaleOrdeLine(models.Model):

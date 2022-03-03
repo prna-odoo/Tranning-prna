@@ -11,12 +11,6 @@
 
     
     'data': [
-        "security/security.xml",
-        "security/ir.model.access.csv",
-        "views/res_partner_views.xml",
-        "views/sale_order_views.xml",
-        "views/inventory_add_appointment_date_views.xml",
-        "views/sale_approval_views.xml",
         "views/unit_of_measure_views.xml",
     ],
 
