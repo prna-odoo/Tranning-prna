@@ -11,8 +11,8 @@
     </record>
 
     <!-- res_partner form view-->
-    <record id="res_partner_view_form" model="ir.ui.view">
-        <field name="name">res_partner_view_form_inherit</field>
+    <record id="view_partner_property_form" model="ir.ui.view">
+        <field name="name">view.partner.property.form.inherit</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="product.view_partner_property_form"/>
         <field name="arch" type="xml">
@@ -23,4 +23,3 @@
     </record>
 
 </odoo>
-

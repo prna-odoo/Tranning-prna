@@ -5,6 +5,6 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # Fields declarations
-    days_to_deliver = fields.Integer()
+    days_to_deliver = fields.Integer(string="Date of deliver")
 
 

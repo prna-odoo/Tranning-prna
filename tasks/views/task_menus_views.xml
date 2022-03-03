@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
         
-    <data>
-    
-                
+
     <record id="task_action" model="ir.actions.act_window">
         <field name="name">MyTasks</field>
         <field name="res_model">tasks.model</field>
@@ -17,6 +15,5 @@
 
 
     </menuitem>
-
-    </data>
+    
 </odoo>

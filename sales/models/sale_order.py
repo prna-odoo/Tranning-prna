@@ -1,28 +1,20 @@
-import string
-from odoo import _,models,fields,api
-from datetime import datetime, timedelta, date
-from odoo.exceptions import UserError, ValidationError
+import datetime
+from odoo import api,fields,models,_
+
+
 
 
 class SaleInherit(models.Model):
     _inherit = "sale.order"
 
-    appointment_Date = fields.Datetime()
+    # Fields declarations
+    appointment_Date = fields.Datetime(string="Appointment Date")
     commitment_date = fields.Datetime(compute = '_compute_date')
-
-    Zero_stock_approval = fields.Boolean()
-
 
     @api.depends("appointment_Date")
     def _compute_date(self):
         for record in self:
             if record.appointment_Date and record.partner_id.days_to_deliver:
-                print("**record",record)
-                print("date",record.appointment_Date)
-                print("***day_deliver",record.partner_id.days_to_deliver)
-                record.commitment_date =(((record.appointment_Date) - timedelta(record.partner_id.days_to_deliver)).date())
-                print(record.commitment_date)
+                record.commitment_date = record.appointment_Date - datetime.timedelta(days=record.partner_id.days_to_deliver)    
             else:
                 record.commitment_date = ""
-
-                #record.validity = int((record.date_deadline - (record.create_date).date()).days) 

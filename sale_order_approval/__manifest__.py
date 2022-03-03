@@ -13,7 +13,6 @@
     'data': [
         "security/security.xml",
         "security/ir.model.access.csv",
-        "views/task_menus_views.xml",
         "views/res_partner_views.xml",
         "views/sale_order_views.xml",
         "views/inventory_add_appointment_date_views.xml",

@@ -1,18 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <record id="task_view" model="ir.ui.view">
-        <field name="name">task Name</field>
-        <field name="model">tasks.model</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-            </tree>
-        </field>
-    </record>
-
+    
     <!-- res_partner form view-->
-    <record id="res_partner_view_form" model="ir.ui.view">
-        <field name="name">res_partner_view_form_inherit</field>
+    <record id="view_partner_property_form" model="ir.ui.view">
+        <field name="name">view.partner_.property.form.inherit</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="product.view_partner_property_form"/>
         <field name="arch" type="xml">
@@ -23,4 +14,3 @@
     </record>
 
 </odoo>
-

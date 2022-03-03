@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, date
 from odoo.exceptions import UserError, ValidationError
 
 
-class Sale_inherit(models.Model):
+class SaleIinherit(models.Model):
     _inherit = "sale.order"
 
     appointment_Date = fields.Datetime()

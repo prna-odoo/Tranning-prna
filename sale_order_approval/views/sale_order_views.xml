@@ -3,8 +3,8 @@
 
 	
     <!-- Sales form view-->
-    <record id ="res_sales_view_form" model="ir.ui.view">
-        <field name="name">res_sales_view_form_inharit</field>
+    <record id ="view_order_form_inherit_sale_stock" model="ir.ui.view">
+        <field name="name">view.order.form.inherit.sale.stock.inherit</field>
         <field name="model">sale.order</field>
         <field name= "inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock"/>
         <field name="arch" type="xml">

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="view_partner_product" model="ir.ui.view">
+            <field name="name">partner product</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='sales_purchases']" position="after">
+                    <page name="inventory" string="Inventory">
+                        <field name="ref" string="Reference"/>
+                        <group>
+                            <field name="property_product_pricelist"/>
+                        </group>
+                    </page> 
+                </xpath>
+            </field>
+        </record>
+
+    <!-- <record id="aaaaaaaa" model="ir.ui.view">
+        <field name="name">aaaaaaaaa</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+        <xpath expr="//page[@name='sales_purchases']" position="after">
+            <page name="inventory" string="Inventory">
+                <group name="container_row_2">
+                    <group name="misc" string="Misc">
+                        <field name="ref" string="Reference"/>
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly': [('parent_id', '!=', False)]}" force_save="1"/>
+                        <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)]}" options="{'no_create': True}"/>
+                    </group>
+                </group>
+            </page> 
+        </xpath>
+        </field> 
+
+        
+    </record>-->
+    </data>
+</odoo>
