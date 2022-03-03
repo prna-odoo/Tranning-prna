@@ -2,7 +2,7 @@
     'name': "Project Task",
     'version': '15.0.1.0.0',
     'category': 'Category',
-    'depends': ['product','sale_stock','stock'],
+    'depends': ['project'],
     'author': "Pravin Nayee",
     'license': 'LGPL-3',
     'summary': 'Tranning module',
