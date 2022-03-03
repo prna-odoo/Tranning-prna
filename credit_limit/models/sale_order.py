@@ -1,4 +1,4 @@
-from odoo import models, api
+from odoo import api,models
 from odoo.exceptions import UserError
 
 class SaleOrder(models.Model):
@@ -6,7 +6,6 @@ class SaleOrder(models.Model):
 
     @api.constrains('amount_total')
     def _check_total_sale(self):
-        print("**************************",self.amount_total)
         total_ammount = self.amount_total + self.partner_id.credit
         if total_ammount > self.partner_id.credit_limit:
             raise UserError("Total can't greater than credit limit")

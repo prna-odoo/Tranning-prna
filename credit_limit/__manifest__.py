@@ -11,10 +11,6 @@
 
     
     'data': [
-        # "security/security.xml",
-        # "security/ir.model.access.csv",
-        # "views/task_menus_views.xml",
-        # "views/res_partner_views.xml",
         "views/credit_limit_views.xml",
     ],
 
