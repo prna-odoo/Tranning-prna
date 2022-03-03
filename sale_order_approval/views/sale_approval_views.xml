@@ -5,24 +5,34 @@
         <field name="name">view.order.form.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
-        <!-- <field name="groups_ids" eval="[4,ref((sales_team.group_sale_manager))]"/> -->
         <field name="arch" type="xml">
                 <xpath expr="//field[@name='payment_term_id']"  position="after">
-                    <field name="Zero_stock_approval" string ="Zero_stock_approval" readonly="1"/>
+                    <field name="zero_stock_approval" string ="Zero_stock_approval" readonly="1"/>
                 </xpath>
         </field>
     </record>
 
 
     <record id="sale_order_view_form_inherit" model="ir.ui.view">
-        <field name="name">bloackage.user</field>
+        <field name="name">sale.order.view.form.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="view_order_form"/>
         <field name="groups_id" eval="[(4,ref('sales_team.group_sale_manager'))]"/>
         <field name="arch" type="xml">
-            <field name='Zero_stock_approval' position="attributes">
+            <field name='zero_stock_approval' position="attributes">
                 <attribute name="readonly">False</attribute>
             </field>
+        </field>
+    </record>
+
+    <record id="approval_order_inherited" model="ir.ui.view">
+        <field name="name">Sale approval</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm'][2]" position="attributes">
+                <attribute name="attrs">{'invisible': [('zero_stock_approval' ,'=', False),"|",("state","=","sale")]}</attribute>
+            </xpath>
         </field>
     </record>
 
