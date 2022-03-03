@@ -5,7 +5,7 @@ from odoo.exceptions import UserError, ValidationError
 
 
 
-class Stock_picking(models.Model):
+class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     #appointment_Date = fields.Datetime(string="Appointment Date" , compute="_date_set")

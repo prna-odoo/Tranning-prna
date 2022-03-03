@@ -1,12 +1,10 @@
-import string
-from odoo import _,models,fields,api
-from datetime import datetime, timedelta, date
-from odoo.exceptions import UserError, ValidationError
+from odoo import _,models,fields
 
 
-class Partner_inherit(models.Model):
+class ResPartner(models.Model):
     _inherit = "res.partner"
 
+    # Fields declarations
     days_to_deliver = fields.Integer()
 
 
